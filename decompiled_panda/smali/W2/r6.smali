@@ -468,7 +468,8 @@
 
     .line 103
     .line 104
-    iget-boolean v0, p1, Lk3/r;->a:Z
+    # PATCH 14a: Force isProUser=true regardless of server result
+    const/4 v0, 0x1
 
     .line 105
     .line 106
@@ -493,7 +494,8 @@
     .line 115
     .line 116
     .line 117
-    iget-boolean v0, p1, Lk3/r;->b:Z
+    # PATCH 14b: Force isByok=false
+    const/4 v0, 0x0
 
     .line 118
     .line 119
@@ -514,7 +516,8 @@
     .line 126
     .line 127
     .line 128
-    iget-boolean v0, p1, Lk3/r;->c:Z
+    # PATCH 14c: Force isActive=true
+    const/4 v0, 0x1
 
     .line 129
     .line 130
@@ -539,7 +542,8 @@
 
     .line 140
     .line 141
-    iget-object v1, p1, Lk3/r;->d:Ljava/lang/String;
+    # PATCH 14d: Force plan="pro"
+    const-string v1, "pro"
 
     .line 142
     .line 143
@@ -548,7 +552,8 @@
     .line 144
     .line 145
     .line 146
-    iget-wide v0, p1, Lk3/r;->e:J
+    # PATCH 14e: Force credits=3000
+    const-wide/16 v0, 0xBB8
 
     .line 147
     .line 148
