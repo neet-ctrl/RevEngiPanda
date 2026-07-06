@@ -1432,18 +1432,7 @@
     move-result-object v0
 
     .line 22
-    # PATCH 13: bypass ALL login/email/onboarding checks in onCreate — jump straight to app init
-    # zero-init all undefined registers so verifier accepts the forward jump
-    const/4 v2, 0x0
-    const/4 v3, 0x0
-    const/4 v4, 0x0
-    const/4 v5, 0x0
-    const/4 v6, 0x0
-    const/4 v7, 0x0
-    const/4 v8, 0x0
-    const/4 v9, 0x0
-    const/4 v10, 0x0
-    goto/16 :cond_5
+    if-eqz p1, :cond_f
 
     .line 23
     .line 24
@@ -3745,8 +3734,7 @@
 
     .line 9
     .line 10
-    # PATCH 5: skip mandatory login gate — always proceed to MainActivity content
-    goto :cond_0
+    if-nez v0, :cond_0
 
     .line 11
     .line 12
