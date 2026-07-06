@@ -1,0 +1,3 @@
+.class public abstract Ly6/e0;
+.super Ljava/lang/Object;
+.source "SourceFile"

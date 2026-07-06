@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/assistant_root_view" android:background="#99000000" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center|top" android:id="@id/clarification_recycler_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="80.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <TextView android:textSize="16.0sp" android:typeface="monospace" android:textColor="#ffe0e0e0" android:layout_gravity="bottom|center" android:id="@id/transcription_text" android:background="@drawable/glass_background" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="180.0dip" android:text="Listening..." android:paddingStart="24.0dip" android:paddingEnd="24.0dip" />
+    <include android:layout_gravity="bottom" android:id="@id/input_box_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/overlay_input_box" />
+</FrameLayout>

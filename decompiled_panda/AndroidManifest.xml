@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" package="com.blurr.voice" platformBuildVersionCode="35" platformBuildVersionName="15">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <queries>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <permission android:name="com.blurr.voice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.blurr.voice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:dataExtractionRules="@xml/data_extraction_rules" android:extractNativeLibs="true" android:fullBackupContent="@xml/backup_rules" android:icon="@drawable/panda_logo_v1_512" android:label="@string/app_name" android:name="com.blurr.voice.MyApplication" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@drawable/panda_logo_v1_512" android:supportsRtl="true" android:theme="@style/Theme.Blurr">
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.blurr.voice.MainActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+        </activity>
+        <activity android:exported="true" android:label="Login_activity" android:name="com.blurr.voice.LoginActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="black-radius-341415.firebaseapp.com" android:pathPrefix="/__/auth/action" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="Choose Mode" android:name="com.blurr.voice.ModeSelectionActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.blurr.voice.ChatActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Composio Chat" android:name="com.blurr.voice.ComposioChatActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.blurr.voice.DialogueActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/settings" android:launchMode="singleTask" android:name="com.blurr.voice.SettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Sensor Automations" android:name="com.blurr.voice.SensorTriggersActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="API Keys" android:name="com.blurr.voice.ApiKeyManagementActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:name="com.blurr.voice.AssistantOnboardingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:name="com.blurr.voice.MemoryOnboardingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="onboarding" android:name="com.blurr.voice.OnboardingPermissionsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="@string/permissions_explained_title" android:name="com.blurr.voice.PermissionsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="How Panda Remembers" android:name="com.blurr.voice.PrivacyActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTop" android:name="com.blurr.voice.RoleRequestActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTop" android:name="com.blurr.voice.AssistEntryActivity" android:screenOrientation="portrait" android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.ASSIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="automations" android:launchMode="singleTask" android:name="com.blurr.voice.triggers.ui.TriggersActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Create Automation" android:name="com.blurr.voice.triggers.ui.CreateTriggerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="Choose Automation Type" android:name="com.blurr.voice.triggers.ui.ChooseTriggerTypeActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Discover Automations" android:name="com.blurr.voice.triggers.ui.DiscoverActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Upgrade to Pro" android:launchMode="singleTask" android:name="com.blurr.voice.ProPurchaseActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Moments" android:launchMode="singleTask" android:name="com.blurr.voice.MomentsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:label="Panda Book" android:name="com.blurr.voice.PandaBookActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <service android:exported="false" android:label="@string/accessibility_service_label" android:name="com.blurr.voice.ScreenInteractionService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibility_service_config"/>
+        </service>
+        <service android:exported="false" android:foregroundServiceType="specialUse" android:name="com.blurr.voice.v2.AgentService"/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="specialUse" android:name="com.blurr.voice.triggers.TriggerMonitoringService"/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="microphone" android:name="com.blurr.voice.services.EnhancedWakeWordService"/>
+        <service android:exported="false" android:name="com.blurr.voice.PandaFcmService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="microphone|specialUse" android:name="com.blurr.voice.ConversationalAgentService">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Text Assistant"/>
+        </service>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="specialUse" android:name="com.blurr.voice.BriefingGeneratorService"/>
+        <service android:enabled="true" android:exported="false" android:foregroundServiceType="microphone" android:name="com.blurr.voice.phone.PhoneCallAgentService"/>
+        <service android:exported="true" android:name="com.blurr.voice.phone.PandaInCallService" android:permission="android.permission.BIND_INCALL_SERVICE">
+            <meta-data android:name="android.telecom.IN_CALL_SERVICE_UI" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.telecom.InCallService"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="true" android:name="com.blurr.voice.phone.ui.DialerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr">
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL"/>
+                <data android:scheme="tel"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:enabled="true" android:exported="false" android:name="com.blurr.voice.services.FloatingPandaButtonService"/>
+        <service android:exported="true" android:label="@string/app_name" android:name="com.blurr.voice.triggers.PandaNotificationListenerService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.blurr.voice.PandaWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/panda_widget_info"/>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="com.blurr.voice.triggers.TriggerReceiver">
+            <intent-filter>
+                <action android:name="com.blurr.voice.action.EXECUTE_TASK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.blurr.voice.triggers.SleepEventReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.location.sleep.ACTION_SLEEP_SEGMENT_EVENT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.blurr.voice.triggers.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="com.blurr.voice.BriefingNotificationReceiver"/>
+        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
+        <activity android:exported="false" android:name="com.blurr.voice.TaskLogsListActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.blurr.voice.TaskLogDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.blurr.voice.PandaBriefingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.blurr.voice.BriefingOnboardingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.blurr.voice.AutomateOnboardingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:exported="false" android:name="com.blurr.voice.ToolkitsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Blurr"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="firebase.auth" android:path="/" android:scheme="genericidp"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="firebase.auth" android:path="/" android:scheme="recaptcha"/>
+            </intent-filter>
+        </activity>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.functions.FirebaseFunctionsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.functions.FunctionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder">
+            <meta-data android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY" android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl"/>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:enabled="true" android:exported="false" android:fitsSystemWindows="true" android:name="androidx.credentials.playservices.HiddenActivity" android:theme="@style/Theme.Hidden"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="7.0.0"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivityV2" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED" android:value="true"/>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.blurr.voice.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <provider android:authorities="com.blurr.voice.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="okhttp3.internal.platform.PlatformInitializer" android:value="androidx.startup"/>
+        </provider>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="android.ext.adservices" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <activity android:exported="false" android:name="com.pairip.licensecheck.LicenseActivity"/>
+        <provider android:authorities="com.blurr.voice.com.pairip.licensecheck.LicenseContentProvider" android:exported="false" android:name="com.pairip.licensecheck.LicenseContentProvider"/>
+        
+        
+        
+        
+        
+    </application>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+</manifest>

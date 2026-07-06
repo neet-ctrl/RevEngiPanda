@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#ff161616</color>
+    <color name="background_color">#ff161616</color>
+    <color name="input_box_background">#ff161616</color>
+    <color name="panel_background">#ff161616</color>
+    <color name="primary">#ff161616</color>
+    <color name="surface">#ff161616</color>
+    <color name="text_primary">#ffffffff</color>
+    <color name="text_secondary">#ffcccccc</color>
+</resources>

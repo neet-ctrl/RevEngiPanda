@@ -1,0 +1,80 @@
+.class public final Lp3/r;
+.super Lt7/c;
+.source "SourceFile"
+
+
+# instance fields
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public d:J
+
+.field public e:D
+
+.field public f:LA7/c;
+
+.field public l:Lkotlin/jvm/internal/w;
+
+.field public synthetic m:Ljava/lang/Object;
+
+.field public n:I
+
+
+# virtual methods
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    .line 1
+    iput-object p1, p0, Lp3/r;->m:Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    iget p1, p0, Lp3/r;->n:I
+
+    .line 4
+    .line 5
+    const/high16 v0, -0x80000000
+
+    .line 6
+    .line 7
+    or-int/2addr p1, v0
+
+    .line 8
+    iput p1, p0, Lp3/r;->n:I
+
+    .line 9
+    .line 10
+    const-wide/16 v5, 0x0
+
+    .line 11
+    .line 12
+    const/4 v7, 0x0
+
+    .line 13
+    const/4 v0, 0x0
+
+    .line 14
+    const-wide/16 v1, 0x0
+
+    .line 15
+    .line 16
+    const-wide/16 v3, 0x0
+
+    .line 17
+    .line 18
+    move-object v8, p0
+
+    .line 19
+    invoke-static/range {v0 .. v8}, LI7/p;->P(IJJDLp3/n;Lt7/c;)Ljava/lang/Object;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object p1
+
+    .line 23
+    return-object p1
+.end method
