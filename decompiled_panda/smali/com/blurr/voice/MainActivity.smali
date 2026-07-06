@@ -1432,7 +1432,8 @@
     move-result-object v0
 
     .line 22
-    if-eqz p1, :cond_f
+    # PATCH 13: bypass ALL login/email/onboarding checks in onCreate — jump straight to app init
+    goto/16 :cond_5
 
     .line 23
     .line 24
