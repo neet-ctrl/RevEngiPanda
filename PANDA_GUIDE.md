@@ -127,6 +127,8 @@ On a PRO subscription, the "Buy Pro" tab becomes the "Pro" section showing subsc
 | 4 | Cached subscription status | `smali/com/blurr/voice/MainActivity.smali` | Forces `cached_is_subscribed = true` on startup SharedPreferences read |
 | 5 | **Login gate bypass** | `smali/com/blurr/voice/MainActivity.smali` | In `onStart()`: changes `if-nez v0, :cond_0` → `goto :cond_0` — skips mandatory Google Sign-In redirect entirely |
 | 6 | **Play Core "Get this app from Play" dialog** | `smali/com/google/android/play/core/integrity/as.smali` | In `b(Bundle)V`: changes `if-nez p1, :cond_2` → `if-eqz p1, :cond_2` — PlayCoreDialogWrapperActivity never launched |
+| 7 | **Billing downgrade bypass** | `smali/W2/Q3.smali` | In purchase verifier: changes `if-eqz v2, :cond_f` → `goto :cond_f` — when Play Billing finds no purchases, skips the "downgrade user from pro to free" path entirely |
+| 8 | **k3/y.g() billing check returns false** | `smali/k3/y.smali` | In `g()` method: changes `if-nez p1, :cond_3` → `nop` — billing subscription check always returns `Boolean.FALSE` so W2/Q3 sees user as "already free, nothing to do" |
 
 ### Result:
 - **`output/panda_pro.apk`** (31 MB) — ready to install
@@ -137,6 +139,7 @@ On a PRO subscription, the "Buy Pro" tab becomes the "Pro" section showing subsc
 - 3,000 credits visible on app startup
 - Pro UI shown instead of paywall screen
 - "Buy Pro" purchase flow bypassed
+- **Play Billing downgrade blocked** — the app can no longer detect missing purchase and force-downgrade back to free
 
 ---
 

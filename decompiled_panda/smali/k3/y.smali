@@ -1577,7 +1577,8 @@
 
     .line 54
     .line 55
-    if-nez p1, :cond_3
+    # PATCH 8: always return FALSE — billing sees no subscription, prevents W2/Q3 downgrade
+    nop
 
     .line 56
     .line 57

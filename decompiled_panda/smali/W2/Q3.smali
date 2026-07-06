@@ -591,7 +591,8 @@
     move-result v2
 
     .line 238
-    if-eqz v2, :cond_f
+    # PATCH 7: skip billing downgrade — always act as if purchases exist (never downgrade)
+    goto :cond_f
 
     .line 239
     .line 240
