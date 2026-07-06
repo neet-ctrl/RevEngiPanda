@@ -110,7 +110,8 @@
 
     .line 21
     .line 22
-    # PATCH 11b: initialize L (isByok) with TRUE — makes v17=1 in h3/m.h banner gate
+    # PATCH 11b: initialize L (isByok) with FALSE — real Pro subscriber is NOT byok
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
     invoke-static {v0, v1}, LU/d;->J(Ljava/lang/Object;LU/F0;)LU/e0;
 
     .line 23
@@ -123,6 +124,7 @@
 
     .line 27
     .line 28
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
     invoke-static {v0, v1}, LU/d;->J(Ljava/lang/Object;LU/F0;)LU/e0;
 
     .line 29

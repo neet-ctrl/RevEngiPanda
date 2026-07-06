@@ -226,9 +226,9 @@
 
     .line 36
     .line 37
-    # PATCH 12: force h3/j.c (isByok) = true — makes v17=1 in h3/m.h banner gate
+    # PATCH 12: force h3/j.c (isByok) = false — real Pro subscriber is NOT byok
     iget-boolean v3, v0, Lh3/j;->c:Z
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
     .line 38
     .line 39
