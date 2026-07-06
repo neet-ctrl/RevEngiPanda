@@ -1,0 +1,68 @@
+[2026-07-06 21:11:28.207 Uid(value=10174):31829:31829 E/AndroidRuntime]
+FATAL EXCEPTION: main
+Process: com.blurr.voice, PID: 31829
+java.lang.VerifyError: Verifier rejected class com.blurr.voice.MainActivity: void com.blurr.voice.MainActivity.onCreate(android.os.Bundle) failed to verify: void com.blurr.voice.MainActivity.onCreate(android.os.Bundle): [0xBF] register v2 has type Undefined but expected Reference: java.lang.String (declaration of 'com.blurr.voice.MainActivity' appears in /data/app/~~WgBVgQPUPcesS8GwG2mZSg==/com.blurr.voice-QgsHUGFTdGE_0QDX0ONA2w==/base.apk)
+	at java.lang.Class.newInstance(Native Method)
+	at android.app.AppComponentFactory.instantiateActivity(AppComponentFactory.java:95)
+	at android.app.Instrumentation.newActivity(Instrumentation.java:1447)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4306)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4637)
+	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:233)
+	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:133)
+	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:103)
+	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:80)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2951)
+	at android.os.Handler.dispatchMessage(Handler.java:110)
+	at android.os.Looper.loopOnce(Looper.java:327)
+	at android.os.Looper.loop(Looper.java:431)
+	at android.app.ActivityThread.main(ActivityThread.java:9329)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:629)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1024)
+
+
+[2026-07-06 21:11:59.186 Uid(value=10174):2001:2001 E/AndroidRuntime]
+FATAL EXCEPTION: main
+Process: com.blurr.voice, PID: 2001
+java.lang.VerifyError: Verifier rejected class com.blurr.voice.MainActivity: void com.blurr.voice.MainActivity.onCreate(android.os.Bundle) failed to verify: void com.blurr.voice.MainActivity.onCreate(android.os.Bundle): [0xBF] register v2 has type Undefined but expected Reference: java.lang.String (declaration of 'com.blurr.voice.MainActivity' appears in /data/app/~~WgBVgQPUPcesS8GwG2mZSg==/com.blurr.voice-QgsHUGFTdGE_0QDX0ONA2w==/base.apk)
+	at java.lang.Class.newInstance(Native Method)
+	at android.app.AppComponentFactory.instantiateActivity(AppComponentFactory.java:95)
+	at android.app.Instrumentation.newActivity(Instrumentation.java:1447)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4306)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4637)
+	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:233)
+	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:133)
+	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:103)
+	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:80)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2951)
+	at android.os.Handler.dispatchMessage(Handler.java:110)
+	at android.os.Looper.loopOnce(Looper.java:327)
+	at android.os.Looper.loop(Looper.java:431)
+	at android.app.ActivityThread.main(ActivityThread.java:9329)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:629)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1024)
+
+
+[2026-07-06 21:12:51.574 Uid(value=10174):3046:3046 E/AndroidRuntime]
+FATAL EXCEPTION: main
+Process: com.blurr.voice, PID: 3046
+java.lang.VerifyError: Verifier rejected class com.blurr.voice.MainActivity: void com.blurr.voice.MainActivity.onCreate(android.os.Bundle) failed to verify: void com.blurr.voice.MainActivity.onCreate(android.os.Bundle): [0xBF] register v2 has type Undefined but expected Reference: java.lang.String (declaration of 'com.blurr.voice.MainActivity' appears in /data/app/~~WgBVgQPUPcesS8GwG2mZSg==/com.blurr.voice-QgsHUGFTdGE_0QDX0ONA2w==/base.apk)
+	at java.lang.Class.newInstance(Native Method)
+	at android.app.AppComponentFactory.instantiateActivity(AppComponentFactory.java:95)
+	at android.app.Instrumentation.newActivity(Instrumentation.java:1447)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4306)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4637)
+	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:233)
+	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:133)
+	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:103)
+	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:80)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2951)
+	at android.os.Handler.dispatchMessage(Handler.java:110)
+	at android.os.Looper.loopOnce(Looper.java:327)
+	at android.os.Looper.loop(Looper.java:431)
+	at android.app.ActivityThread.main(ActivityThread.java:9329)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:629)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1024)
+
