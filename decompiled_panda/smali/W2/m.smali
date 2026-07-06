@@ -3025,19 +3025,20 @@
 
     .line 1514
     .line 1515
-    iget-object v4, v1, Lcom/blurr/voice/MainActivity;->K:LU/e0;
+    # PATCH 9: bypass MainActivity.K LiveData — force isSubscribed=true
+    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     .line 1516
     .line 1517
-    invoke-virtual {v4}, LU/e0;->getValue()Ljava/lang/Object;
+    # (MainActivity.K.getValue() bypassed)
 
     .line 1518
     .line 1519
     .line 1520
-    move-result-object v4
+    # v4 = Boolean.TRUE (isSubscribed)
 
     .line 1521
-    check-cast v4, Ljava/lang/Boolean;
+    # (check-cast bypassed — v4 is already Boolean)
 
     .line 1522
     .line 1523
@@ -3049,16 +3050,17 @@
     move-result v19
 
     .line 1527
-    iget-object v4, v1, Lcom/blurr/voice/MainActivity;->L:LU/e0;
+    # PATCH 9: bypass MainActivity.L LiveData — force isByok=true (makes v17=1 in h3/m.h banner check)
+    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     .line 1528
     .line 1529
-    invoke-virtual {v4}, LU/e0;->getValue()Ljava/lang/Object;
+    # (MainActivity.L.getValue() bypassed)
 
     .line 1530
     .line 1531
     .line 1532
-    move-result-object v4
+    # v4 = Boolean.TRUE (isByok=true skips Free plan banner via v17=1)
 
     .line 1533
     check-cast v4, Ljava/lang/Boolean;

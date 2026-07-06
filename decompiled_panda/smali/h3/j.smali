@@ -220,11 +220,15 @@
 
     .line 34
     .line 35
+    # PATCH 12: force h3/j.b (isSubscribed) = true
     iget-boolean v2, v0, Lh3/j;->b:Z
+    const/4 v2, 0x1
 
     .line 36
     .line 37
+    # PATCH 12: force h3/j.c (isByok) = true — makes v17=1 in h3/m.h banner gate
     iget-boolean v3, v0, Lh3/j;->c:Z
+    const/4 v3, 0x1
 
     .line 38
     .line 39

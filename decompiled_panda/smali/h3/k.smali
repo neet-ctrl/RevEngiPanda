@@ -73,7 +73,8 @@
 
     .line 19
     .line 20
-    invoke-static {v0, v1, v2, p1, p2}, Lh3/m;->l(JLA7/a;LU/q;I)V
+    # PATCH 13: skip Free plan banner render — h3/m.l() not called for pro users
+    # invoke-static {v0, v1, v2, p1, p2}, Lh3/m;->l(JLA7/a;LU/q;I)V
 
     .line 21
     .line 22

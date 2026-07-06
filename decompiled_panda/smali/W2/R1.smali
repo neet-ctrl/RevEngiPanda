@@ -1590,7 +1590,8 @@
 
     .line 490
     .line 491
-    invoke-static/range {v46 .. v69}, LR/p3;->b(Ljava/lang/String;Lg0/q;JJLT0/u;LT0/x;LT0/n;JLa1/i;JIZIILA7/c;LO0/I;LU/q;III)V
+    # PATCH 14a: suppress ⚠️ "Your briefing might be incomplete" warning card
+    nop
 
     .line 492
     .line 493
@@ -1697,7 +1698,8 @@
 
     .line 545
     .line 546
-    invoke-static/range {v46 .. v69}, LR/p3;->b(Ljava/lang/String;Lg0/q;JJLT0/u;LT0/x;LT0/n;JLa1/i;JIZIILA7/c;LO0/I;LU/q;III)V
+    # PATCH 14b: suppress "Upgrade to Pro for complete briefings" warning card
+    nop
 
     .line 547
     .line 548
@@ -1827,7 +1829,8 @@
 
     .line 611
     .line 612
-    invoke-static/range {v46 .. v69}, LR/p3;->b(Ljava/lang/String;Lg0/q;JJLT0/u;LT0/x;LT0/n;JLa1/i;JIZIILA7/c;LO0/I;LU/q;III)V
+    # PATCH 14c: suppress "→" upgrade action button
+    nop
 
     .line 613
     .line 614

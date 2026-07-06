@@ -93,7 +93,8 @@
 
     .line 13
     .line 14
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    # PATCH 11a: initialize K (isSubscribed/isProUser) with TRUE instead of FALSE
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     .line 15
     .line 16
@@ -109,6 +110,7 @@
 
     .line 21
     .line 22
+    # PATCH 11b: initialize L (isByok) with TRUE — makes v17=1 in h3/m.h banner gate
     invoke-static {v0, v1}, LU/d;->J(Ljava/lang/Object;LU/F0;)LU/e0;
 
     .line 23

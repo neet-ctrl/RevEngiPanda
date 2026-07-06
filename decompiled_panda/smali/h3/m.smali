@@ -10941,7 +10941,8 @@
     .line 48
     invoke-virtual {v5, v7}, LU/q;->W(I)V
 
-    if-nez v17, :cond_2d
+    # PATCH 10: always skip Free plan banner — force pro user UI
+    goto :cond_2d
 
     shr-int/lit8 v7, v28, 0x9
 
