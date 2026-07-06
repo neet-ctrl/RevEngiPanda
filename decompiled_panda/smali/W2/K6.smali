@@ -2411,6 +2411,8 @@
     .line 1047
     .line 1048
     move-result-wide v2
+    # PATCH 15b: Force credits display to 3000
+    const-wide/16 v2, 0xBB8
 
     .line 1049
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2462,6 +2464,8 @@
     .line 1074
     .line 1075
     move-result-wide v5
+    # PATCH 15c: Force credits colour check value to 3000 (> 10 = normal colour)
+    const-wide/16 v5, 0xBB8
 
     .line 1076
     const-wide/16 v7, 0xa
